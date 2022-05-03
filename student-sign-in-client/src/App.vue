@@ -1,5 +1,7 @@
 <template id="template">
   <div>
+    <h1>This is my Header</h1>
+    
       <new-student-form 
       v-on:student-added="newStudentAdded">
       </new-student-form>
@@ -56,10 +58,6 @@ export default {
     //  }
       })
     },
-
-
-
-
     studentArrivedOrLeft(student, present) {
       student.present = present // update present value
       this.$student_api.updateStudent(student).then( () => {
@@ -77,9 +75,9 @@ export default {
 }
 </script>
 
-<style>
+<style> 
 @import "https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
 </style>
 
-  
+
 
