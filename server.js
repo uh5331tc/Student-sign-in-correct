@@ -9,13 +9,13 @@ let app = express()
 let vueClientPath = path.join(__dirname, 'student-sign-in-client', 'dist')
 app.use(express.static(vueClientPath))
 
-//be able to handle JSON Requests, vconvert data to JavaScript
+//be able to handle JSON Requests, vconvert data to JavaScript good times
 app.use(express.json())
 
 app.use('/api', api_routes)
 
 app.use(function(req, res, next) {
-    // respond with '404' to any other requests 
+    // respond with '404' to any other requests  these are fun
     res.status(404).send('Not Found')
 })
 
@@ -24,7 +24,7 @@ app.use(function(err, req, res, next) {
     res.status(500).send('Server Error')
 })
 
-// start server running
+// start server running this is where we connect to the 3000 server
 let server = app.listen(process.env.PORT || 3000, function() {
     console.log('Express server running on port ', server.address().port )
 })

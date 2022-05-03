@@ -68,16 +68,16 @@ export default {
     studentDeleted(student) { 
       this.$student_api.deleteStudent(student.id).then( () => {
         this.updateStudents()
-        this.mostRecentStudent = {} // clears welcome/goodbye messages
-      }).catch( () => alert('Unable to delete student'))
+        this.mostRecentStudent = {} // clears welcome/goodbye messages for user
+      }).catch( () => alert('Unable to delete the student'))
     }
   }
-}
+}  // END /STYLE TAG IS NOT TURNING A COLOR ?? 
 </script>
 
 <style> 
 @import "https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-</style>
+</style> 
 
 
 

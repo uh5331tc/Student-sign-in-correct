@@ -27,6 +27,6 @@ let studentModel = require('./student')(sequelize, DataTypes)
 db[studentModel.name] = studentModel
 
 db.sequelize = sequelize // information on how to connect to the database
-db.Sequelize = Sequelize // reference to sequelize library 
+db.Sequelize = Sequelize // reference to sequelize library here
 
 module.exports = db

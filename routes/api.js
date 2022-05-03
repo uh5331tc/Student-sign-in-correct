@@ -31,14 +31,14 @@ router.post('/students', function(req, res, next){
 
 // TODO EDIT STUDENT
 router.patch('/students/:id', function (req, res, next) { //ERROR?? CHANGED /'student(s)/:id'
-// studentID will be set to request 
+// studentID will be set to request place
     let studentID = req.params.id
     let updatedStudent = req.body
     Student.update( updatedStudent, { where: { id: studentID} } )
         .then ( (rowsModified) => {
 
             let numberOfRowsModified = rowsModified[0]
-            if (numberOfRowsModified ==1 ) { //number of rows changed
+            if (numberOfRowsModified ==1 ) { //number of rows where changed
                 return res.send('ok')
             } else {
                 return res.status(404).json(['Student with that id not found'])
