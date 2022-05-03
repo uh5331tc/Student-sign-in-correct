@@ -5,7 +5,7 @@ let Student = db.Student
 let router = express.Router()
 // only 4 
 router.get('/students', function(req, res, next){
-    Student.findAll( {order: ['present', 'name']} ).then( students => {
+    Student.findAll( {order: ['starID']} ).then( students => {
         return res.json(students)  // default its sending '200' status code, with no errors
            
     }).catch(err => next(err) ) // pass to server error to return 500Error
